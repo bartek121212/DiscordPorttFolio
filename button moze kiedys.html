@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Numbers on Hover</title>
+    <style>
+        .button {
+            position: relative;
+            display: inline-block;
+            padding: 20px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+        .number {
+            position: absolute;
+            display: none;
+        }
+        .number-1 {
+            top: 0;
+            left: 0;
+        }
+        .number-2 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .number-3 {
+            bottom: 0;
+            right: 0;
+        }
+        .button:hover .number {
+            display: block;
+        }
+        img{
+            max-width: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="button">
+        <span class="number number-1"><img src="logo.png" class="max-w-2"></span>
+        <span class="number number-2"><img src="logo.png" class="max-w-2"></span>
+        <span class="number number-3"><img src="logo.png" class="max-w-2"></span>
+    </button>
+    <script>
+        const button = document.querySelector('button');
+const numbers = document.querySelectorAll('.number');
+
+button.addEventListener('mouseover', () => {
+  numbers.forEach((number, index) => {
+    setTimeout(() => {
+      number.style.display = 'block';
+    }, index * 200);
+  });
+});
+
+button.addEventListener('mouseout', () => {
+  numbers.forEach(number => {
+    number.style.display = 'none';
+  });
+});
+    </script>
+</body>
+</html>

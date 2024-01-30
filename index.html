@@ -84,6 +84,71 @@
         .dark-mode3 #projects-container>h2{
           color:white;
         }
+		        #tekst1{
+          transform: translateX(0px);
+          animation: float 3s ease-out infinite;
+        }
+        @keyframes float{
+          0%{
+            transform: translateX(0px);
+          }
+          50%{
+            transform: translateY(-4px);
+          }
+          80%{
+            transform: translateY(4px);
+          }
+          100%{
+            transform: translateY(0px);
+          }
+        }
+        #tekst3:hover>#tekst2{
+          animation: float 0s;
+          transform: translateX(0px);
+        }
+        #tekst3:hover>#tekst1{
+          animation: float 0s;
+          transform: translateX(0px);
+        }
+        #tekst2{
+          transform: translateX(0px);
+          animation: float2 3s ease-out infinite;
+        }
+        @keyframes float2{
+          0%{
+            transform: translateX(0px);
+          }
+          50%{
+            transform: translateY(4px);
+          }
+          80%{
+            transform: translateY(-4px);
+          }
+          100%{
+            transform: translateY(0px);
+          }
+        }
+        #main2{
+          transform: translateX(0px);
+          animation: float3 3s ease-out infinite;
+        }
+        #main2:hover{
+          animation: float3 0s;
+        }
+        @keyframes float3{
+          0%{
+            transform: scale(1.0)
+          }
+          50%{
+            transform: scale(1.1);
+          }
+          80%{
+            transform: scale(0.9);
+          }
+          100%{
+            transform: scale(1.0);
+          }
+        }
       </style>
     </head>
 <body class="animated 40s delay-150 transition-all">
@@ -99,7 +164,18 @@
             <div class="flex justify-center items-center flex-col flex-wrap">
                 <div class="py-">
                     <div class="flex flex-col justify-center items-center flex-wrap delay-150 transition-all">
-                        <h1 class="font-bold text-2xl delay-150 transition-all">AuuuMordzia#7445</h1>
+                        <div id="tekst3" class="flex justify-center items-center flex-wrap">
+                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">A</h1>
+                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
+                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
+                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
+                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">M</h1>
+                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">o</h1>
+                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">r</h1>
+                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">d</h1>
+                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">z</h1>
+                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">i</h1>
+                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">a</h1><h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">#</h1><h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">7</h1><h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">4</h1><h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">4</h1><h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">5</h1></div>
                         <p class="font-bold text-lg delay-150 transition-all">Frontend-Developer</p>
                         <div class="px-5 mt-1 flex gap-2 max-sm:px-0 max-sm:gap-1">
                             <svg className="" with="40" height="40" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -132,7 +208,7 @@
                               </svg>
                         </div>
                         <div class="flex justify-center items-center flex-wrap gap-5 py-5">
-                            <a href="https://auuumordzia.pl" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500 hover:block">Main Portfolio</a>
+                            <a id="main2" href="https://auuumordzia.pl" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500 hover:block">Main Portfolio</a>
                             <a href="https://tipply.pl/@HTMLMORDZIA" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500">Tipply</a>
                         </div>
                         <div id="menu" class="flex justify-center items-center flex-wrap py-5 gap-10 bg-slate-300 rounded-xl px-10">

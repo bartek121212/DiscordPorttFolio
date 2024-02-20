@@ -84,7 +84,7 @@
         .dark-mode3 #projects-container>h2{
           color:white;
         }
-		        #tekst1{
+        #tekst1{
           transform: translateX(0px);
           animation: float 3s ease-out infinite;
         }
@@ -149,11 +149,23 @@
             transform: scale(1.0);
           }
         }
-        #skills2{
-          filter: drop-shadow(0px 0px 7px rgb(0, 102, 255));
+        #svgg{
+          transform: translateX(0px);
+          animation: float4 3s ease-out infinite;
         }
-        #skills2{
-            filter: drop-shadow(0px 0px 25px rgb(0, 102, 255));
+        @keyframes float4{
+          0%{
+            transform: scale(1.0)
+          }
+          50%{
+            transform: scale(1.1);
+          }
+          80%{
+            transform: scale(0.9);
+          }
+          100%{
+            transform: scale(1.0);
+          }
         }
       </style>
     </head>
@@ -162,14 +174,20 @@
     <svg id="svg1" onclick="toggleSVGs()" class="delay-150 transition-all" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="nightModeIconTitle" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="nightModeIconTitle">Night Mode</title> <path d="M12 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"></path> <path d="M15.899 12.899a4 4 0 0 1-4.797-4.797A4.002 4.002 0 0 0 12 16c1.9 0 3.49-1.325 3.899-3.101z"></path> <path d="M12 5V3M12 21v-2"></path> <path d="M5 12H2h3zM22 12h-3 3zM16.95 7.05L19.07 4.93 16.95 7.05zM4.929 19.071L7.05 16.95 4.93 19.07zM16.95 16.95l2.121 2.121-2.121-2.121zM4.929 4.929L7.05 7.05 4.93 4.93z"></path> </g></svg>
     <svg id="svg2" onclick="toggleSVGs()" class="delay-150 transition-all hidden animated 20s tansition-all delay-150 bg-slate-300 rounded-full" width="64px" height="64px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>dark-mode</title> <g id="Layer_2" data-name="Layer 2"> <g id="Icons"> <g> <rect width="48" height="48" fill="none"></rect> <g> <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z"></path> <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"></path> </g> </g> </g> </g> </g></svg>
   </div>
+  <div id="img2" class="flex justify-center items-center flex-wrap gap-10 bg-slate-300 py-10 border-2 border-black">
+    <svg id="svgg" height="90px" width="90px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#E8EDEE;" d="M494.345,512H17.655C7.901,512,0,504.099,0,494.345V17.655C0,7.901,7.901,0,17.655,0h476.69 C504.099,0,512,7.901,512,17.655v476.69C512,504.099,504.099,512,494.345,512"></path> <polygon style="fill:#0F81E0;" points="211.862,79.448 300.138,79.448 300.138,44.138 211.862,44.138 "></polygon> <path style="fill:#DD342E;" d="M88.173,70.621h-52.86c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.86 c4.882,0,8.828,3.955,8.828,8.828S93.054,70.621,88.173,70.621"></path> <path style="fill:#ECBA16;" d="M176.552,70.621h-52.966c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.966 c4.882,0,8.828,3.955,8.828,8.828S181.433,70.621,176.552,70.621"></path> <path style="fill:#42B05C;" d="M388.311,70.621h-52.86c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.86 c4.882,0,8.828,3.955,8.828,8.828S393.192,70.621,388.311,70.621"></path> <path style="fill:#7383BF;" d="M476.69,70.621h-52.966c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.966 c4.882,0,8.828,3.955,8.828,8.828S481.571,70.621,476.69,70.621"></path> <polygon style="fill:#ED7161;" points="35.31,264.828 476.69,264.828 476.69,123.586 35.31,123.586 "></polygon> <path style="fill:#ECBA16;" d="M105.931,317.793H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h61.793 c4.882,0,8.828,3.955,8.828,8.828S110.813,317.793,105.931,317.793"></path> <path style="fill:#7383BF;" d="M273.655,317.793H158.897c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h114.759 c4.882,0,8.828,3.955,8.828,8.828S278.537,317.793,273.655,317.793"></path> <path style="fill:#ECBA16;" d="M476.69,317.793H326.621c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828H476.69 c4.882,0,8.828,3.955,8.828,8.828S481.571,317.793,476.69,317.793"></path> <path style="fill:#DD342E;" d="M158.897,370.759H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h114.759 c4.882,0,8.828,3.955,8.828,8.828S163.778,370.759,158.897,370.759"></path> <g> <path style="fill:#42B05C;" d="M247.172,370.759h-35.31c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h35.31 c4.882,0,8.828,3.955,8.828,8.828S252.054,370.759,247.172,370.759"></path> <path style="fill:#42B05C;" d="M105.931,423.724H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h61.793 c4.882,0,8.828,3.955,8.828,8.828S110.813,423.724,105.931,423.724"></path> </g> <path style="fill:#ECBA16;" d="M247.172,423.724h-88.276c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h88.276 c4.882,0,8.828,3.955,8.828,8.828S252.054,423.724,247.172,423.724"></path> <path style="fill:#7383BF;" d="M158.897,476.69H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h114.759 c4.882,0,8.828,3.955,8.828,8.828S163.778,476.69,158.897,476.69"></path> <path style="fill:#DD342E;" d="M247.172,476.69h-35.31c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h35.31 c4.882,0,8.828,3.955,8.828,8.828S252.054,476.69,247.172,476.69"></path> <polygon style="fill:#42B05C;" points="300.138,467.862 476.69,467.862 476.69,361.931 300.138,361.931 "></polygon> </g> </g></svg>
+    <svg id="svgg" height="90px" width="90px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#B0B6BB;" d="M308.145,406.069c-1.836,5.12-6.691,8.828-12.42,8.828h-70.621c-5.729,0-10.593-3.708-12.429-8.828 H5.102c-2.825,0-5.102,2.286-5.102,5.102v25.106c0,2.816,2.278,5.102,5.102,5.102h501.795c2.816,0,5.102-2.286,5.102-5.102v-25.106 c0-2.816-2.286-5.102-5.102-5.102H308.145z"></path> <path style="fill:#E8EDEE;" d="M212.678,406.069c1.836,5.12,6.691,8.828,12.42,8.828h70.621c5.729,0,10.593-3.708,12.429-8.828 H494.34V97.103c0-14.627-11.855-26.483-26.483-26.483H44.133c-14.627,0-26.483,11.855-26.483,26.483v308.966H212.678z"></path> <polygon style="fill:#7383BF;" points="52.963,370.759 459.032,370.759 459.032,105.931 52.963,105.931 "></polygon> <g> <path style="fill:#FFFFFF;" d="M105.928,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C114.756,278.528,110.801,282.483,105.928,282.483"></path> <path style="fill:#FFFFFF;" d="M158.894,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C167.721,278.528,163.767,282.483,158.894,282.483"></path> <path style="fill:#FFFFFF;" d="M220.687,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C229.515,278.528,225.56,282.483,220.687,282.483"></path> <path style="fill:#FFFFFF;" d="M158.894,247.172h-52.966c-4.873,0-8.828-3.955-8.828-8.828s3.955-8.828,8.828-8.828h52.966 c4.873,0,8.828,3.955,8.828,8.828S163.767,247.172,158.894,247.172"></path> <path style="fill:#FFFFFF;" d="M247.17,211.862h-52.966c-4.873,0-8.828-3.955-8.828-8.828c0-4.873,3.955-8.828,8.828-8.828h52.966 c4.873,0,8.828,3.955,8.828,8.828C255.997,207.907,252.043,211.862,247.17,211.862"></path> <path style="fill:#FFFFFF;" d="M308.963,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C317.79,278.528,313.836,282.483,308.963,282.483"></path> <path style="fill:#FFFFFF;" d="M335.446,211.862H282.48c-4.873,0-8.828-3.955-8.828-8.828c0-4.873,3.955-8.828,8.828-8.828h52.966 c4.873,0,8.828,3.955,8.828,8.828C344.273,207.907,340.318,211.862,335.446,211.862"></path> <path style="fill:#FFFFFF;" d="M379.584,233.931h11.034c6.082,0,11.034-4.952,11.034-11.034s-4.952-11.034-11.034-11.034h-11.034 V233.931z M370.756,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828h19.862 c15.819,0,28.69,12.871,28.69,28.69s-12.871,28.69-28.69,28.69h-11.034v22.069C379.584,278.528,375.629,282.483,370.756,282.483 L370.756,282.483z"></path> </g> </g> </g></svg>
+    <svg id="svgg" height="90px" width="90px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="120px" height="120px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;" d="M256.003,26.483h8.828"></path> <path style="fill:#E8EDEE;" d="M415.797,512H96.212c-14.133,0-25.591-11.705-25.591-26.147V26.147C70.621,11.705,82.079,0,96.212,0 h319.585c14.133,0,25.582,11.705,25.582,26.147v459.705C441.379,500.295,429.93,512,415.797,512"></path> <polygon style="fill:#ECBA16;" points="97.106,441.379 414.899,441.379 414.899,52.966 97.106,52.966 "></polygon> <path style="fill:#6C797A;" d="M282.485,476.69c0,14.627-11.855,26.483-26.483,26.483c-14.627,0-26.483-11.855-26.483-26.483 c0-14.627,11.855-26.483,26.483-26.483C270.63,450.207,282.485,462.062,282.485,476.69"></path> <g> <path style="fill:#FFFFFF;" d="M211.972,309.034c-2.26,0-4.52-0.865-6.241-2.586l-52.559-52.559 c-1.024-0.883-1.845-1.995-2.383-3.284c-1.359-3.302-0.653-7.089,1.871-9.613l53.027-53.027c3.443-3.443,9.031-3.443,12.482,0 c3.443,3.452,3.443,9.039,0,12.482l-46.733,46.742l46.777,46.777c3.452,3.452,3.452,9.031,0,12.482 C216.492,308.169,214.232,309.034,211.972,309.034"></path> <path style="fill:#FFFFFF;" d="M300.248,309.086c-2.251,0-4.511-0.856-6.232-2.578c-3.452-3.443-3.46-9.031-0.018-12.482 l46.645-46.795l-46.645-46.733c-3.443-3.452-3.434-9.048,0.009-12.491c3.46-3.443,9.048-3.434,12.491,0.018l52.86,52.966 c3.434,3.452,3.434,9.022,0,12.473l-52.86,53.027C304.777,308.221,302.508,309.086,300.248,309.086"></path> <path style="fill:#FFFFFF;" d="M247.292,309.034c-0.477,0-0.971-0.035-1.465-0.124c-4.802-0.794-8.051-5.35-7.247-10.161 l17.655-105.94c0.803-4.802,5.314-8.06,10.161-7.256c4.802,0.803,8.051,5.35,7.247,10.161l-17.655,105.949 C255.272,305.971,251.529,309.034,247.292,309.034"></path> </g> </g> </g></svg>
+  </div>
     <main class="delay-150 transition-all">
         <div class="py-20 flex flex-col justify-center items-center flex-wrap gap-10">
             <div class="rounded-xl flex justify-center items-center flex-wrap">
-            <img id="img2" src="logo.png" class="px-1 py-1 rounded-xl border-2 border-blue-500 delay-450 transition-all">
+              <img id="img2" src="logo.png" class="px-1 py-1 rounded-xl border-2 border-blue-500 delay-450 transition-all ">
             </div>
             <div class="flex justify-center items-center flex-col flex-wrap">
                 <div class="py-">
                     <div class="flex flex-col justify-center items-center flex-wrap delay-150 transition-all">
+                        <!-- <h1 class="font-bold text-2xl delay-150 transition-all">AuuuMordzia#7445</h1> -->
                         <div id="tekst3" class="flex justify-center items-center flex-wrap">
                         <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">A</h1>
                         <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
@@ -214,7 +232,7 @@
                               </svg>
                         </div>
                         <div class="flex justify-center items-center flex-wrap gap-5 py-5">
-                            <a id="main2" href="https://auuumordzia.pl" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500 hover:block">Main Portfolio</a>
+                            <a id="main2" href="mordzia.pl.auuumordzia.pl" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500 hover:block">Main Portfolio</a>
                             <a href="https://tipply.pl/@HTMLMORDZIA" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500">Tipply</a>
                         </div>
                         <div id="menu" class="flex justify-center items-center flex-wrap py-5 gap-10 bg-slate-300 rounded-xl px-10">
@@ -224,7 +242,7 @@
                         <div class="py-10">
                             <div id="skills-container" class="delay-150 transition-all hidden bg-slate-200 shadow-2xl text-slate-700 rounded-xl px-10 max-sm:px-0 font-bold text-lg w-full h-full text-center">
                                 <h2 class="text-2xl font-bold">Skills:</h2>
-                                <div class="px-40 max-sm:px-0 flex gap-40 justify-center items-center flex-wrap py-10">
+                                <div class="px-40 max-lg:px-10 max-md:px-10 max-sm:px-10 flex gap-40 justify-center items-center flex-wrap py-10">
                                   <ul class="flex flex-col gap-10 justify-center items-center flex-wrap">
                                     <h2 class="font-bold shadow-2xl text-xl">Moje umiejętności:</h2>
                                     <div class="flex gap-1 justify-center items-center">
@@ -241,7 +259,7 @@
                                     </div>
                                     <div class="flex gap-1 justify-center items-center">
                                       <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
-                                      <li class="mt-5">Java Script<p class="text-sm">Dopiero uczę się</p></li>
+                                      <li class="mt-5">Java Sxript<p class="text-sm">Dopiero uczę się</p></li>
                                     </div>
                                   </ul>
                                   <ul class="flex flex-col gap-10 justify-center items-center flex-wrap">
@@ -269,7 +287,7 @@
                                 <h2 class="text-xl font-bold">Moje projekty:</h2>
                                 <div class="flex flex-col justify-center items-center flex-wrap">
                                   <div class="py-20">
-                                    <div id="skills2" class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500  hover:shadow-2xl transition-all delay-150">
+                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
                                       <img src="portfoili.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
                                       <div class="py-10">
                                         <h1 class="text-center font-bold text-xl">Portfolio</h1>
@@ -281,7 +299,7 @@
                                     </div>
                                   </div>
                                   <div class="py-20">
-                                    <div id="skills2" class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500  hover:shadow-2xl transition-all delay-150">
+                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
                                       <img src="respon.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
                                       <div class="py-10">
                                         <h1 class="text-center font-bold text-xl">Responsiv</h1>
@@ -293,7 +311,7 @@
                                     </div>
                                   </div>
                                   <div class="py-20">
-                                    <div id="skills2" class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500  hover:shadow-2xl transition-all delay-150">
+                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
                                       <img src="serwer.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
                                       <div class="py-10">
                                         <h1 class="text-center font-bold text-xl">Strona pod Serwer fivem</h1>
@@ -305,7 +323,7 @@
                                     </div>
                                   </div>
                                   <div class="py-20">
-                                    <div id="skills2" class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500  hover:shadow-2xl transition-all delay-150">
+                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
                                       <img src="regulamin.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
                                       <div class="py-10">
                                         <h1 class="text-center font-bold text-xl">Regulamin</h1>
@@ -317,7 +335,7 @@
                                     </div>
                                   </div>
                                   <div class="py-20">
-                                    <div id="skills2" class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500  hover:shadow-2xl transition-all delay-150">
+                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
                                       <img src="soon.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
                                       <div class="py-10">
                                         <h1 class="text-center font-bold text-xl">Soon</h1>
@@ -360,12 +378,20 @@ toggleSkillsButton.addEventListener('click', () => {
   toggleProjectsButton.classList.remove('selected', 'projects-selected');
   skillsContainer.style.display = 'block';
   projectsContainer.style.display = 'none';
+  var animatedElements = document.getElementsByClassName('animated');
+            for (var i = 0; i < animatedElements.length; i++) {
+              revealElement(animatedElements[i], 1000, 500, '50px', 'bottom');
+            }
 });
 toggleProjectsButton.addEventListener('click', () => {
   toggleSkillsButton.classList.remove('selected');
   toggleProjectsButton.classList.toggle('selected', 'projects-selected');
   skillsContainer.style.display = 'none';
   projectsContainer.style.display = 'block';
+              var animatedElements = document.getElementsByClassName('animated');
+            for (var i = 0; i < animatedElements.length; i++) {
+              revealElement(animatedElements[i], 1000, 500, '50px', 'bottom');
+            }
 });
 
 const toggleButton = document.getElementById('svg1');

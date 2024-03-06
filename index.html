@@ -8,6 +8,7 @@
       <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="output.css">
         <style>
+	
         ::-webkit-scrollbar {
               width: 10px;
         }
@@ -357,10 +358,10 @@
     <script>
 function revealElement(element, duration, delay, distance, origin) {
   var initialOpacity = window.getComputedStyle(element).getPropertyValue('opacity');
-    element.style.opacity = '0';
+/*     element.style.opacity = '0';
       setTimeout(function() {
       element.style.transition = 'opacity ' + duration + 'ms';
-    element.style.opacity = initialOpacity;
+    element.style.opacity = initialOpacity; */
   }, delay);
 }
   var animatedElements = document.getElementsByClassName('animated');

@@ -8,7 +8,9 @@
       <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="output.css">
         <style>
-	
+	body{
+    overflow: hidden; /* Ukrycie elementów */
+  }
         ::-webkit-scrollbar {
               width: 10px;
         }
@@ -169,191 +171,468 @@
             transform: scale(1.0);
           }
         }
+        #info {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 20px;
+          background-color: white;
+          border-radius: 8px;
+          background: red;
+          color: white;
+          font-size: 20px;
+          font-style:bold;
+        }
+        #content {
+          display: none;
+        }
+        .gallery-container2 {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.gallery2 {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery2 img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.fullscreen-container2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.fullscreen-image2 {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+.close-fullscreen2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.close-fullscreen2:focus {
+    outline: none;
+}
+.prev2, .next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+.prev2 {
+    left: 0;
+}
+.next2 {
+    right: 0;
+}
+.gallery-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.gallery {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+.close-fullscreen {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.close-fullscreen:focus {
+    outline: none;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+.boxik {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        /* Add a class to the element to trigger the animation */
+        .boxik.show {
+          opacity: 1;
+          transform: translateY(0);
+          
+        } .boxik2 {
+          opacity: 0;
+          transform: translateY(120px);
+          transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik2.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik3 {
+          opacity: 0;
+          transform: translateY(140px);
+          transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik3.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik4 {
+          opacity: 0;
+          transform: translateY(180px);
+          transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik4.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik5 {
+          opacity: 0;
+          transform: translateY(120px);
+          transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik5.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik6 {
+          opacity: 0;
+          transform: translateY(130px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik6.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik7 {
+          opacity: 0;
+          transform: translateY(120px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik7.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik8 {
+          opacity: 0;
+          transform: translateY(140px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik8.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik9 {
+          opacity: 0;
+          transform: translateY(180px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik9.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
       </style>
     </head>
 <body class="animated 40s delay-150 transition-all">
-  <div class="flex justify-center items-center flex-wrap py-5">
-    <svg id="svg1" onclick="toggleSVGs()" class="delay-150 transition-all" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="nightModeIconTitle" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="nightModeIconTitle">Night Mode</title> <path d="M12 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"></path> <path d="M15.899 12.899a4 4 0 0 1-4.797-4.797A4.002 4.002 0 0 0 12 16c1.9 0 3.49-1.325 3.899-3.101z"></path> <path d="M12 5V3M12 21v-2"></path> <path d="M5 12H2h3zM22 12h-3 3zM16.95 7.05L19.07 4.93 16.95 7.05zM4.929 19.071L7.05 16.95 4.93 19.07zM16.95 16.95l2.121 2.121-2.121-2.121zM4.929 4.929L7.05 7.05 4.93 4.93z"></path> </g></svg>
-    <svg id="svg2" onclick="toggleSVGs()" class="delay-150 transition-all hidden animated 20s tansition-all delay-150 bg-slate-300 rounded-full" width="64px" height="64px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>dark-mode</title> <g id="Layer_2" data-name="Layer 2"> <g id="Icons"> <g> <rect width="48" height="48" fill="none"></rect> <g> <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z"></path> <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"></path> </g> </g> </g> </g> </g></svg>
-  </div>
-  <div id="img2" class="flex justify-center items-center flex-wrap gap-10 py-10">
-    <svg id="svgg" height="90px" width="90px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#E8EDEE;" d="M494.345,512H17.655C7.901,512,0,504.099,0,494.345V17.655C0,7.901,7.901,0,17.655,0h476.69 C504.099,0,512,7.901,512,17.655v476.69C512,504.099,504.099,512,494.345,512"></path> <polygon style="fill:#0F81E0;" points="211.862,79.448 300.138,79.448 300.138,44.138 211.862,44.138 "></polygon> <path style="fill:#DD342E;" d="M88.173,70.621h-52.86c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.86 c4.882,0,8.828,3.955,8.828,8.828S93.054,70.621,88.173,70.621"></path> <path style="fill:#ECBA16;" d="M176.552,70.621h-52.966c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.966 c4.882,0,8.828,3.955,8.828,8.828S181.433,70.621,176.552,70.621"></path> <path style="fill:#42B05C;" d="M388.311,70.621h-52.86c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.86 c4.882,0,8.828,3.955,8.828,8.828S393.192,70.621,388.311,70.621"></path> <path style="fill:#7383BF;" d="M476.69,70.621h-52.966c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.966 c4.882,0,8.828,3.955,8.828,8.828S481.571,70.621,476.69,70.621"></path> <polygon style="fill:#ED7161;" points="35.31,264.828 476.69,264.828 476.69,123.586 35.31,123.586 "></polygon> <path style="fill:#ECBA16;" d="M105.931,317.793H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h61.793 c4.882,0,8.828,3.955,8.828,8.828S110.813,317.793,105.931,317.793"></path> <path style="fill:#7383BF;" d="M273.655,317.793H158.897c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h114.759 c4.882,0,8.828,3.955,8.828,8.828S278.537,317.793,273.655,317.793"></path> <path style="fill:#ECBA16;" d="M476.69,317.793H326.621c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828H476.69 c4.882,0,8.828,3.955,8.828,8.828S481.571,317.793,476.69,317.793"></path> <path style="fill:#DD342E;" d="M158.897,370.759H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h114.759 c4.882,0,8.828,3.955,8.828,8.828S163.778,370.759,158.897,370.759"></path> <g> <path style="fill:#42B05C;" d="M247.172,370.759h-35.31c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h35.31 c4.882,0,8.828,3.955,8.828,8.828S252.054,370.759,247.172,370.759"></path> <path style="fill:#42B05C;" d="M105.931,423.724H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h61.793 c4.882,0,8.828,3.955,8.828,8.828S110.813,423.724,105.931,423.724"></path> </g> <path style="fill:#ECBA16;" d="M247.172,423.724h-88.276c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h88.276 c4.882,0,8.828,3.955,8.828,8.828S252.054,423.724,247.172,423.724"></path> <path style="fill:#7383BF;" d="M158.897,476.69H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h114.759 c4.882,0,8.828,3.955,8.828,8.828S163.778,476.69,158.897,476.69"></path> <path style="fill:#DD342E;" d="M247.172,476.69h-35.31c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h35.31 c4.882,0,8.828,3.955,8.828,8.828S252.054,476.69,247.172,476.69"></path> <polygon style="fill:#42B05C;" points="300.138,467.862 476.69,467.862 476.69,361.931 300.138,361.931 "></polygon> </g> </g></svg>
-    <svg id="svgg" height="90px" width="90px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#B0B6BB;" d="M308.145,406.069c-1.836,5.12-6.691,8.828-12.42,8.828h-70.621c-5.729,0-10.593-3.708-12.429-8.828 H5.102c-2.825,0-5.102,2.286-5.102,5.102v25.106c0,2.816,2.278,5.102,5.102,5.102h501.795c2.816,0,5.102-2.286,5.102-5.102v-25.106 c0-2.816-2.286-5.102-5.102-5.102H308.145z"></path> <path style="fill:#E8EDEE;" d="M212.678,406.069c1.836,5.12,6.691,8.828,12.42,8.828h70.621c5.729,0,10.593-3.708,12.429-8.828 H494.34V97.103c0-14.627-11.855-26.483-26.483-26.483H44.133c-14.627,0-26.483,11.855-26.483,26.483v308.966H212.678z"></path> <polygon style="fill:#7383BF;" points="52.963,370.759 459.032,370.759 459.032,105.931 52.963,105.931 "></polygon> <g> <path style="fill:#FFFFFF;" d="M105.928,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C114.756,278.528,110.801,282.483,105.928,282.483"></path> <path style="fill:#FFFFFF;" d="M158.894,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C167.721,278.528,163.767,282.483,158.894,282.483"></path> <path style="fill:#FFFFFF;" d="M220.687,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C229.515,278.528,225.56,282.483,220.687,282.483"></path> <path style="fill:#FFFFFF;" d="M158.894,247.172h-52.966c-4.873,0-8.828-3.955-8.828-8.828s3.955-8.828,8.828-8.828h52.966 c4.873,0,8.828,3.955,8.828,8.828S163.767,247.172,158.894,247.172"></path> <path style="fill:#FFFFFF;" d="M247.17,211.862h-52.966c-4.873,0-8.828-3.955-8.828-8.828c0-4.873,3.955-8.828,8.828-8.828h52.966 c4.873,0,8.828,3.955,8.828,8.828C255.997,207.907,252.043,211.862,247.17,211.862"></path> <path style="fill:#FFFFFF;" d="M308.963,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C317.79,278.528,313.836,282.483,308.963,282.483"></path> <path style="fill:#FFFFFF;" d="M335.446,211.862H282.48c-4.873,0-8.828-3.955-8.828-8.828c0-4.873,3.955-8.828,8.828-8.828h52.966 c4.873,0,8.828,3.955,8.828,8.828C344.273,207.907,340.318,211.862,335.446,211.862"></path> <path style="fill:#FFFFFF;" d="M379.584,233.931h11.034c6.082,0,11.034-4.952,11.034-11.034s-4.952-11.034-11.034-11.034h-11.034 V233.931z M370.756,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828h19.862 c15.819,0,28.69,12.871,28.69,28.69s-12.871,28.69-28.69,28.69h-11.034v22.069C379.584,278.528,375.629,282.483,370.756,282.483 L370.756,282.483z"></path> </g> </g> </g></svg>
-    <svg id="svgg" height="90px" width="90px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="120px" height="120px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;" d="M256.003,26.483h8.828"></path> <path style="fill:#E8EDEE;" d="M415.797,512H96.212c-14.133,0-25.591-11.705-25.591-26.147V26.147C70.621,11.705,82.079,0,96.212,0 h319.585c14.133,0,25.582,11.705,25.582,26.147v459.705C441.379,500.295,429.93,512,415.797,512"></path> <polygon style="fill:#ECBA16;" points="97.106,441.379 414.899,441.379 414.899,52.966 97.106,52.966 "></polygon> <path style="fill:#6C797A;" d="M282.485,476.69c0,14.627-11.855,26.483-26.483,26.483c-14.627,0-26.483-11.855-26.483-26.483 c0-14.627,11.855-26.483,26.483-26.483C270.63,450.207,282.485,462.062,282.485,476.69"></path> <g> <path style="fill:#FFFFFF;" d="M211.972,309.034c-2.26,0-4.52-0.865-6.241-2.586l-52.559-52.559 c-1.024-0.883-1.845-1.995-2.383-3.284c-1.359-3.302-0.653-7.089,1.871-9.613l53.027-53.027c3.443-3.443,9.031-3.443,12.482,0 c3.443,3.452,3.443,9.039,0,12.482l-46.733,46.742l46.777,46.777c3.452,3.452,3.452,9.031,0,12.482 C216.492,308.169,214.232,309.034,211.972,309.034"></path> <path style="fill:#FFFFFF;" d="M300.248,309.086c-2.251,0-4.511-0.856-6.232-2.578c-3.452-3.443-3.46-9.031-0.018-12.482 l46.645-46.795l-46.645-46.733c-3.443-3.452-3.434-9.048,0.009-12.491c3.46-3.443,9.048-3.434,12.491,0.018l52.86,52.966 c3.434,3.452,3.434,9.022,0,12.473l-52.86,53.027C304.777,308.221,302.508,309.086,300.248,309.086"></path> <path style="fill:#FFFFFF;" d="M247.292,309.034c-0.477,0-0.971-0.035-1.465-0.124c-4.802-0.794-8.051-5.35-7.247-10.161 l17.655-105.94c0.803-4.802,5.314-8.06,10.161-7.256c4.802,0.803,8.051,5.35,7.247,10.161l-17.655,105.949 C255.272,305.971,251.529,309.034,247.292,309.034"></path> </g> </g> </g></svg>
-  </div>
-    <main class="delay-150 transition-all">
-        <div class="py-20 flex flex-col justify-center items-center flex-wrap gap-10">
-            <div class="rounded-xl flex justify-center items-center flex-wrap">
-              <img id="img2" src="logo.png" class="px-1 py-1 rounded-xl border-2 border-blue-500 delay-450 transition-all ">
-            </div>
-            <div class="flex justify-center items-center flex-col flex-wrap">
-                <div class="py-">
-                    <div class="flex flex-col justify-center items-center flex-wrap delay-150 transition-all">
-                        <!-- <h1 class="font-bold text-2xl delay-150 transition-all">AuuuMordzia#7445</h1> -->
-                        <div id="tekst3" class="flex justify-center items-center flex-wrap">
-                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">A</h1>
-                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
-                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
-                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
-                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">M</h1>
-                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">o</h1>
-                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">r</h1>
-                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">d</h1>
-                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">z</h1>
-                        <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">i</h1>
-                        <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">a</h1><h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">#</h1><h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">7</h1><h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">4</h1><h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">4</h1><h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">5</h1></div>
-                        <p class="font-bold text-lg delay-150 transition-all">Frontend-Developer</p>
-                        <div class="px-5 mt-1 flex gap-2 max-sm:px-0 max-sm:gap-1">
-                            <svg className="" with="40" height="40" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path class="hover:opacity-65 cursor-pointer"
+  <div id="info"></div>
+  <div id="content" class="hidden">
+    <div class="flex justify-center items-center flex-wrap py-5">
+      <svg id="svg1" onclick="toggleSVGs()" class="delay-150 transition-all" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="nightModeIconTitle" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="nightModeIconTitle">Night Mode</title> <path d="M12 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"></path> <path d="M15.899 12.899a4 4 0 0 1-4.797-4.797A4.002 4.002 0 0 0 12 16c1.9 0 3.49-1.325 3.899-3.101z"></path> <path d="M12 5V3M12 21v-2"></path> <path d="M5 12H2h3zM22 12h-3 3zM16.95 7.05L19.07 4.93 16.95 7.05zM4.929 19.071L7.05 16.95 4.93 19.07zM16.95 16.95l2.121 2.121-2.121-2.121zM4.929 4.929L7.05 7.05 4.93 4.93z"></path> </g></svg>
+      <svg id="svg2" onclick="toggleSVGs()" class="delay-150 transition-all hidden animated 20s tansition-all delay-150 bg-slate-300 rounded-full" width="64px" height="64px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>dark-mode</title> <g id="Layer_2" data-name="Layer 2"> <g id="Icons"> <g> <rect width="48" height="48" fill="none"></rect> <g> <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z"></path> <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"></path> </g> </g> </g> </g> </g></svg>
+    </div>
+    <div id="img2" class="flex justify-center items-center flex-wrap gap-10 py-10">
+      <svg id="svgg" height="90px" width="90px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#E8EDEE;" d="M494.345,512H17.655C7.901,512,0,504.099,0,494.345V17.655C0,7.901,7.901,0,17.655,0h476.69 C504.099,0,512,7.901,512,17.655v476.69C512,504.099,504.099,512,494.345,512"></path> <polygon style="fill:#0F81E0;" points="211.862,79.448 300.138,79.448 300.138,44.138 211.862,44.138 "></polygon> <path style="fill:#DD342E;" d="M88.173,70.621h-52.86c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.86 c4.882,0,8.828,3.955,8.828,8.828S93.054,70.621,88.173,70.621"></path> <path style="fill:#ECBA16;" d="M176.552,70.621h-52.966c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.966 c4.882,0,8.828,3.955,8.828,8.828S181.433,70.621,176.552,70.621"></path> <path style="fill:#42B05C;" d="M388.311,70.621h-52.86c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.86 c4.882,0,8.828,3.955,8.828,8.828S393.192,70.621,388.311,70.621"></path> <path style="fill:#7383BF;" d="M476.69,70.621h-52.966c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h52.966 c4.882,0,8.828,3.955,8.828,8.828S481.571,70.621,476.69,70.621"></path> <polygon style="fill:#ED7161;" points="35.31,264.828 476.69,264.828 476.69,123.586 35.31,123.586 "></polygon> <path style="fill:#ECBA16;" d="M105.931,317.793H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h61.793 c4.882,0,8.828,3.955,8.828,8.828S110.813,317.793,105.931,317.793"></path> <path style="fill:#7383BF;" d="M273.655,317.793H158.897c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h114.759 c4.882,0,8.828,3.955,8.828,8.828S278.537,317.793,273.655,317.793"></path> <path style="fill:#ECBA16;" d="M476.69,317.793H326.621c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828H476.69 c4.882,0,8.828,3.955,8.828,8.828S481.571,317.793,476.69,317.793"></path> <path style="fill:#DD342E;" d="M158.897,370.759H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h114.759 c4.882,0,8.828,3.955,8.828,8.828S163.778,370.759,158.897,370.759"></path> <g> <path style="fill:#42B05C;" d="M247.172,370.759h-35.31c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h35.31 c4.882,0,8.828,3.955,8.828,8.828S252.054,370.759,247.172,370.759"></path> <path style="fill:#42B05C;" d="M105.931,423.724H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h61.793 c4.882,0,8.828,3.955,8.828,8.828S110.813,423.724,105.931,423.724"></path> </g> <path style="fill:#ECBA16;" d="M247.172,423.724h-88.276c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h88.276 c4.882,0,8.828,3.955,8.828,8.828S252.054,423.724,247.172,423.724"></path> <path style="fill:#7383BF;" d="M158.897,476.69H44.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h114.759 c4.882,0,8.828,3.955,8.828,8.828S163.778,476.69,158.897,476.69"></path> <path style="fill:#DD342E;" d="M247.172,476.69h-35.31c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h35.31 c4.882,0,8.828,3.955,8.828,8.828S252.054,476.69,247.172,476.69"></path> <polygon style="fill:#42B05C;" points="300.138,467.862 476.69,467.862 476.69,361.931 300.138,361.931 "></polygon> </g> </g></svg>
+      <svg id="svgg" height="90px" width="90px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#B0B6BB;" d="M308.145,406.069c-1.836,5.12-6.691,8.828-12.42,8.828h-70.621c-5.729,0-10.593-3.708-12.429-8.828 H5.102c-2.825,0-5.102,2.286-5.102,5.102v25.106c0,2.816,2.278,5.102,5.102,5.102h501.795c2.816,0,5.102-2.286,5.102-5.102v-25.106 c0-2.816-2.286-5.102-5.102-5.102H308.145z"></path> <path style="fill:#E8EDEE;" d="M212.678,406.069c1.836,5.12,6.691,8.828,12.42,8.828h70.621c5.729,0,10.593-3.708,12.429-8.828 H494.34V97.103c0-14.627-11.855-26.483-26.483-26.483H44.133c-14.627,0-26.483,11.855-26.483,26.483v308.966H212.678z"></path> <polygon style="fill:#7383BF;" points="52.963,370.759 459.032,370.759 459.032,105.931 52.963,105.931 "></polygon> <g> <path style="fill:#FFFFFF;" d="M105.928,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C114.756,278.528,110.801,282.483,105.928,282.483"></path> <path style="fill:#FFFFFF;" d="M158.894,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C167.721,278.528,163.767,282.483,158.894,282.483"></path> <path style="fill:#FFFFFF;" d="M220.687,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C229.515,278.528,225.56,282.483,220.687,282.483"></path> <path style="fill:#FFFFFF;" d="M158.894,247.172h-52.966c-4.873,0-8.828-3.955-8.828-8.828s3.955-8.828,8.828-8.828h52.966 c4.873,0,8.828,3.955,8.828,8.828S163.767,247.172,158.894,247.172"></path> <path style="fill:#FFFFFF;" d="M247.17,211.862h-52.966c-4.873,0-8.828-3.955-8.828-8.828c0-4.873,3.955-8.828,8.828-8.828h52.966 c4.873,0,8.828,3.955,8.828,8.828C255.997,207.907,252.043,211.862,247.17,211.862"></path> <path style="fill:#FFFFFF;" d="M308.963,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828 c4.873,0,8.828,3.955,8.828,8.828v70.621C317.79,278.528,313.836,282.483,308.963,282.483"></path> <path style="fill:#FFFFFF;" d="M335.446,211.862H282.48c-4.873,0-8.828-3.955-8.828-8.828c0-4.873,3.955-8.828,8.828-8.828h52.966 c4.873,0,8.828,3.955,8.828,8.828C344.273,207.907,340.318,211.862,335.446,211.862"></path> <path style="fill:#FFFFFF;" d="M379.584,233.931h11.034c6.082,0,11.034-4.952,11.034-11.034s-4.952-11.034-11.034-11.034h-11.034 V233.931z M370.756,282.483c-4.873,0-8.828-3.955-8.828-8.828v-70.621c0-4.873,3.955-8.828,8.828-8.828h19.862 c15.819,0,28.69,12.871,28.69,28.69s-12.871,28.69-28.69,28.69h-11.034v22.069C379.584,278.528,375.629,282.483,370.756,282.483 L370.756,282.483z"></path> </g> </g> </g></svg>
+      <svg id="svgg" height="90px" width="90px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="120px" height="120px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;" d="M256.003,26.483h8.828"></path> <path style="fill:#E8EDEE;" d="M415.797,512H96.212c-14.133,0-25.591-11.705-25.591-26.147V26.147C70.621,11.705,82.079,0,96.212,0 h319.585c14.133,0,25.582,11.705,25.582,26.147v459.705C441.379,500.295,429.93,512,415.797,512"></path> <polygon style="fill:#ECBA16;" points="97.106,441.379 414.899,441.379 414.899,52.966 97.106,52.966 "></polygon> <path style="fill:#6C797A;" d="M282.485,476.69c0,14.627-11.855,26.483-26.483,26.483c-14.627,0-26.483-11.855-26.483-26.483 c0-14.627,11.855-26.483,26.483-26.483C270.63,450.207,282.485,462.062,282.485,476.69"></path> <g> <path style="fill:#FFFFFF;" d="M211.972,309.034c-2.26,0-4.52-0.865-6.241-2.586l-52.559-52.559 c-1.024-0.883-1.845-1.995-2.383-3.284c-1.359-3.302-0.653-7.089,1.871-9.613l53.027-53.027c3.443-3.443,9.031-3.443,12.482,0 c3.443,3.452,3.443,9.039,0,12.482l-46.733,46.742l46.777,46.777c3.452,3.452,3.452,9.031,0,12.482 C216.492,308.169,214.232,309.034,211.972,309.034"></path> <path style="fill:#FFFFFF;" d="M300.248,309.086c-2.251,0-4.511-0.856-6.232-2.578c-3.452-3.443-3.46-9.031-0.018-12.482 l46.645-46.795l-46.645-46.733c-3.443-3.452-3.434-9.048,0.009-12.491c3.46-3.443,9.048-3.434,12.491,0.018l52.86,52.966 c3.434,3.452,3.434,9.022,0,12.473l-52.86,53.027C304.777,308.221,302.508,309.086,300.248,309.086"></path> <path style="fill:#FFFFFF;" d="M247.292,309.034c-0.477,0-0.971-0.035-1.465-0.124c-4.802-0.794-8.051-5.35-7.247-10.161 l17.655-105.94c0.803-4.802,5.314-8.06,10.161-7.256c4.802,0.803,8.051,5.35,7.247,10.161l-17.655,105.949 C255.272,305.971,251.529,309.034,247.292,309.034"></path> </g> </g> </g></svg>
+    </div>
+      <main class="delay-150 transition-all">
+          <div class="py-20 flex flex-col justify-center items-center flex-wrap gap-10">
+              <div class="rounded-xl flex justify-center items-center flex-wrap">
+                <img id="img2" src="logo.png" class="px-1 py-1 rounded-xl border-2 border-blue-500 delay-450 transition-all ">
+              </div>
+              <div class="flex justify-center items-center flex-col flex-wrap">
+                  <div class="py-">
+                      <div class="flex flex-col justify-center items-center flex-wrap delay-150 transition-all">
+                          <!-- <h1 class="font-bold text-2xl delay-150 transition-all">AuuuMordzia#7445</h1> -->
+                          <div id="tekst3" class="flex justify-center items-center flex-wrap">
+                          <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">A</h1>
+                          <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
+                          <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
+                          <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">u</h1>
+                          <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">M</h1>
+                          <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">o</h1>
+                          <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">r</h1>
+                          <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">d</h1>
+                          <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">z</h1>
+                          <h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">i</h1>
+                          <h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">a</h1><h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">#</h1><h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">7</h1><h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">4</h1><h1 id="tekst1" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">4</h1><h1 id="tekst2" class="hover:text-slate-400 delay-150 transition-all cursor-pointer text-2xl font-bold">5</h1></div>
+                          <p class="font-bold text-lg delay-150 transition-all">Frontend-Developer</p>
+                          <div class="px-5 mt-1 flex gap-2 max-sm:px-0 max-sm:gap-1">
+                              <svg className="" with="40" height="40" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path class="hover:opacity-65 cursor-pointer"
+                                    fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              <svg className="" with="40" height="40" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path class="hover:opacity-65 cursor-pointer"
                                   fill-rule="evenodd"
-                                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                                   clip-rule="evenodd"
-                                />
+                                  />
                               </svg>
-                            <svg className="" with="40" height="40" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path class="hover:opacity-65 cursor-pointer"
-                                fill-rule="evenodd"
-                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                clip-rule="evenodd"
-                                />
-                            </svg>
-                            <svg className="" with="40" height="40" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path class="hover:opacity-65 cursor-pointer"
-                                  fill-rule="evenodd" 
-                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                                  clip-rule="evenodd"
-                                />
-                              </svg>
-                              <svg className="h- w-" with="40" height="40" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path class="hover:opacity-65 cursor-pointer"
-                                  fill-rule="evenodd"
-                                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                                  clip-rule="evenodd"
-                                />
-                              </svg>
-                        </div>
-                        <div class="flex justify-center items-center flex-wrap gap-5 py-5">
-                            <a id="main2" href="https://auuumordzia.pl/" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500 hover:block">Main Portfolio</a>
-                            <a href="https://tipply.pl/@HTMLMORDZIA" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500">Tipply</a>
-                        </div>
-                        <div id="menu" class="flex justify-center items-center flex-wrap py-5 gap-10 bg-slate-300 rounded-xl px-10">
-                            <button id="toggle-skills" href="" class="px-10 py-5 rounded-xl bg--200 text-black font-bold text-lg delay-150 transition-all shadow-2xl shadow-slate-900">Umiejętnosci</button>
-                            <button id="toggle-projects" href="" class="px-10 py-5 rounded-xl bg--200 text-black font-bold text-lg delay-150 transition-all shadow-2xl shadow-slate-900">Mein Project</button>
-                        </div>
-                        <div class="py-10">
-                            <div id="skills-container" class="delay-150 transition-all hidden bg-slate-200 shadow-2xl text-slate-700 rounded-xl px-10 max-sm:px-0 font-bold text-lg w-full h-full text-center">
-                                <h2 class="text-2xl font-bold">Skills:</h2>
-                                <div class="px-40 max-lg:px-10 max-md:px-10 max-sm:px-10 flex gap-40 justify-center items-center flex-wrap py-10">
-                                  <ul class="flex flex-col gap-10 justify-center items-center flex-wrap">
-                                    <h2 class="font-bold shadow-2xl text-xl">Moje umiejętności:</h2>
-                                    <div class="flex gap-1 justify-center items-center">
-                                      <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
-                                      <li class="mt-5">HTML<p class="text-sm">Nawet Git</p></li>
-                                    </div>
-                                    <div class="flex gap-1 justify-center items-center">
-                                      <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
-                                      <li class="mt-5">CSS<p class="text-sm">Nawet Git</p></li>
-                                    </div>
-                                    <div class="flex gap-1 justify-center items-center">
-                                      <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
-                                      <li class="mt-5">TailwindCSS<p class="text-sm">Nawet Git</p></li>
-                                    </div>
-                                    <div class="flex gap-1 justify-center items-center">
-                                      <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
-                                      <li class="mt-5">Java Sxript<p class="text-sm">Dopiero uczę się</p></li>
-                                    </div>
-                                  </ul>
-                                  <ul class="flex flex-col gap-10 justify-center items-center flex-wrap">
-                                    <h2 class="font-bold shadow-2xl text-xl">Systemy Operacyjne:</h2>
-                                    <div class="flex gap-1 justify-center items-center">
-                                      <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
-                                      <li class="mt-5">Linux<p class="text-sm">Chyba Git</p></li>
-                                    </div>
-                                    <div class="flex gap-1 justify-center items-center">
-                                      <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
-                                      <li class="mt-5">Ubuntu<p class="text-sm">Chyba Git</p></li>
-                                    </div>
-                                    <div class="flex gap-1 justify-center items-center">
-                                      <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
-                                      <li class="mt-5">Windows Serwer<p class="text-sm">Nawet Git</p></li>
-                                    </div>
-                                    <div class="flex gap-1 justify-center items-center">
-                                      <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
-                                      <li class="mt-5">Soon<p class="text-sm">Soon</p></li>
-                                    </div>
-                                  </ul>
-                                </div>
+                              <svg className="" with="40" height="40" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path class="hover:opacity-65 cursor-pointer"
+                                    fill-rule="evenodd" 
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                                <svg className="h- w-" with="40" height="40" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path class="hover:opacity-65 cursor-pointer"
+                                    fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                          </div>
+                          <div class="flex justify-center items-center flex-wrap gap-5 py-5">
+                              <a id="main2" href="https://auuumordzia.pl/" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500 hover:block">Main Portfolio</a>
+                              <a href="https://tipply.pl/@HTMLMORDZIA" class="px-5 py-3 border-2 border-black rounded-xl shadow-2xl text-lg font-bold bg-green-400 text-white transition-all delay-150 hover:bg-green-500">Tipply</a>
+                          </div>
+                          <div id="menu" class="flex justify-center items-center flex-wrap py-5 gap-10 bg-slate-300 rounded-xl px-10">
+                              <button id="toggle-skills" href="" class="px-10 py-5 rounded-xl bg--200 text-black font-bold text-lg delay-150 transition-all shadow-2xl shadow-slate-900">Umiejętnosci</button>
+                              <button id="toggle-projects" href="" class="px-10 py-5 rounded-xl bg--200 text-black font-bold text-lg delay-150 transition-all shadow-2xl shadow-slate-900">Mein Project</button>
+                          </div>
+                          <div class="py-10">
+                              <div id="skills-container" class="delay-150 transition-all hidden bg-slate-200 shadow-2xl text-slate-700 rounded-xl px-10 max-sm:px-0 font-bold text-lg w-full h-full text-center">
+                                  <h2 class="text-2xl font-bold">Skills:</h2>
+                                  <div class="px-40 max-lg:px-10 max-md:px-10 max-sm:px-10 flex gap-40 justify-center items-center flex-wrap py-10">
+                                    <ul class="flex flex-col gap-10 justify-center items-center flex-wrap">
+                                      <h2 class="font-bold shadow-2xl text-xl">Moje umiejętności:</h2>
+                                      <div class="flex gap-1 justify-center items-center">
+                                        <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
+                                        <li class="mt-5">HTML<p class="text-sm">Nawet Git</p></li>
+                                      </div>
+                                      <div class="flex gap-1 justify-center items-center">
+                                        <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
+                                        <li class="mt-5">CSS<p class="text-sm">Nawet Git</p></li>
+                                      </div>
+                                      <div class="flex gap-1 justify-center items-center">
+                                        <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
+                                        <li class="mt-5">TailwindCSS<p class="text-sm">Nawet Git</p></li>
+                                      </div>
+                                      <div class="flex gap-1 justify-center items-center">
+                                        <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
+                                        <li class="mt-5">Java Sxript<p class="text-sm">Dopiero uczę się</p></li>
+                                      </div>
+                                    </ul>
+                                    <ul class="flex flex-col gap-10 justify-center items-center flex-wrap">
+                                      <h2 class="font-bold shadow-2xl text-xl">Systemy Operacyjne:</h2>
+                                      <div class="flex gap-1 justify-center items-center">
+                                        <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
+                                        <li class="mt-5">Linux<p class="text-sm">Chyba Git</p></li>
+                                      </div>
+                                      <div class="flex gap-1 justify-center items-center">
+                                        <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
+                                        <li class="mt-5">Ubuntu<p class="text-sm">Chyba Git</p></li>
+                                      </div>
+                                      <div class="flex gap-1 justify-center items-center">
+                                        <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
+                                        <li class="mt-5">Windows Serwer<p class="text-sm">Nawet Git</p></li>
+                                      </div>
+                                      <div class="flex gap-1 justify-center items-center">
+                                        <svg width="20px" height="20px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg>
+                                        <li class="mt-5">Soon<p class="text-sm">Soon</p></li>
+                                      </div>
+                                    </ul>
+                                  </div>
+                              </div>
+                              <div class="fullscreen-container" onclick="closeFullscreen()">
+                                <button class="close-fullscreen" onclick="closeFullscreen()">✕</button>
+                                <img class="fullscreen-image" src="" alt="">
+                                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                                <button class="next" onclick="changeSlide(1)">❯</button>
                             </div>
-                            <div id="projects-container" class="delay-150 transition-all hidden bg-slate-200 shadow-2xl text-slate-700 rounded-xl px-40 max-sm:px-0 font-bold text-lg w-full h-full text-center">
-                                <h2 class="text-xl font-bold">Moje projekty:</h2>
-                                <div class="flex flex-col justify-center items-center flex-wrap">
-                                  <div class="py-20">
-                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
-                                      <img src="portfoili.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
-                                      <div class="py-10">
-                                        <h1 class="text-center font-bold text-xl">Portfolio</h1>
-                                        <p class="font-medium text-lg">Tworzenie portfolio.</p>
-                                      </div>
-                                      <div class="py-5 px-5 max-sm:px-3 flex justify-start items-start flex-wrap gap-5">
-                                        <a href="" class="bg-blue-500 rounded-xl text-white hover:bg-transparent delay-150 transition-all px-3 py-3 font-bold text-lg">Obczaj więcej!</a>
-                                      </div>
-                                    </div>
+                            <div class="fullscreen-container2" onclick="closeFull()">
+                              <button class="close-fullscreen2" onclick="closeFull()">✕</button>
+                              <img class="fullscreen-image2" src="" alt="">
+                              <button class="prev2" onclick="changeSlide2(-1, event)">❮</button>
+                              <button class="next2" onclick="changeSlide2(1, event)">❯</button>
+                          </div>
+                          <div id="projects-container" class="delay-150 transition-all hidden bg-slate-200 shadow-2xl text-slate-700 rounded-xl px-80 max-sm:px-0 font-bold text-lg w-full h-full text-center">
+                            <h2 class="text-xl font-bold">Moje projekty:</h2>
+                            <div class="flex flex-col justify-center items-center flex-wrap">
+                            <article id="projects-container" class="text-white bg-slate-900 px-40 max-sm:px-0 max-md:px-0 max-lg:px-0 flex justify-center gap-20 py-80 flex-wrap">
+                                  <div class="flex flex-col justify-center items-center flex-wrap">
+                                      <div class="flex flex-col justify-center items-center flex-wrap gap-10">
+                                          <div class="boxik">
+                                                  <div id="div1" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                                                              <img id="original-image" class="rounded-t-lg" src="Tailwind-CSS.webp" alt="" />
+                                                      <div class="p-5">
+                                                              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">TailWindCSS</h5>
+                                                          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Bardzo dobry framowork do pisania stron internetowych zapraszam do użycia.Framework polecany przez wielu frontend-Developer-Junior-..</p>
+                                                          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                              Obczaj więcej
+                                                              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                                              </svg>
+                                                          </a>
+                                                      </div>
+                                                  </div>
+                                                  </div>
+                                                  <div class="boxik2">
+                                                  <div id="div2" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                                                    <div id="original-image2" class="gallery-container">
+                                                      <div class="gallery" id="gallery">
+                                                          <img src="dashboard.png" alt="Zdjęcie 1">
+                                                          <img src="konsola.png" alt="Zdjęcie 2">
+                                                          <img src="ostatnia.png" alt="Zdjęcie 3">
+                                                      </div>
+                                                    </div>
+                                                      <div class="p-5">
+                                                              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">DashBoard Hosting</h5>
+                                                          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Strony portfolio dedykowane dla osób które chcą udostępnić swoją działalność.Również dla osób które chcą mieć wizytówke.</p>
+                                                          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                              Obczaj więcej
+                                                              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                                              </svg>
+                                                          </a>
+                                                      </div>
+                                                  </div>
+                                                  </div>
+                                                  <div class="boxik3">
+                                                  <div id="div3" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                                                    <div id="original-image3" class="gallery-container2">
+                                                      <div class="gallery2" id="gallery2">
+                                                          <img src="stronarp.png" alt="Zdjęcie 1">
+                                                          <img src="inforp.png" alt="Zdjęcie 2">
+                                                          <img src="staty.png" alt="Zdjęcie 3">
+                                                          <img src="regulamin222.png" alt="Zdjęcie 4">
+                                                      </div>
+                                                    </div>
+                                                      <div class="p-5">
+                                                              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Serwer RP strona</h5>
+                                                          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Strony dedykowane dla wlaścicieli serwerów fivem.Którzy szukają wizytówki serwera bądz reklamy.</p>
+                                                          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                              Obczaj więcej
+                                                              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                                              </svg>
+                                                          </a>
+                                                      </div>
+                                                  </div>
+                                                  </div>
+                                                  <div class="boxik4">
+                                                  <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                                                          <img id="original-image4" class="rounded-t-lg" src="respon.png" alt="" />
+                                                      <div class="p-5">
+                                                              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Responsiv</h5>
+                                                          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+                                                          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                              Obczaj więcej
+                                                              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                                              </svg>
+                                                          </a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      <a href="projekty.html" class="text-center text-xl font-bold py-5 hover:text-blue-500 transition-all delay-150">Obczaj więcej</a>
                                   </div>
-                                  <div class="py-20">
-                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
-                                      <img src="respon.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
-                                      <div class="py-10">
-                                        <h1 class="text-center font-bold text-xl">Responsiv</h1>
-                                        <p class="font-medium text-lg">Tworzenie stron pod urządzenia mobilne</p>
-                                      </div>
-                                      <div class="py-5 px-5 max-sm:px-3 flex justify-start items-start flex-wrap gap-5">
-                                        <a href="" class="bg-blue-500 rounded-xl text-white hover:bg-transparent delay-150 transition-all px-3 py-3 font-bold text-lg">Obczaj więcej!</a>
-                                      </div>
-                                    </div>
+                                      
+                                
+                                  </article>
                                   </div>
-                                  <div class="py-20">
-                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
-                                      <img src="serwer.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
-                                      <div class="py-10">
-                                        <h1 class="text-center font-bold text-xl">Strona pod Serwer fivem</h1>
-                                        <p class="font-medium text-lg">Tworzenie stron internetowych dla serwerów fivem.</p>
-                                      </div>
-                                      <div class="py-5 px-5 max-sm:px-3 flex justify-start items-start flex-wrap gap-5">
-                                        <a href="" class="bg-blue-500 rounded-xl text-white hover:bg-transparent delay-150 transition-all px-3 py-3 font-bold text-lg">Obczaj więcej!</a>
-                                      </div>
-                                    </div>
                                   </div>
-                                  <div class="py-20">
-                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
-                                      <img src="regulamin.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
-                                      <div class="py-10">
-                                        <h1 class="text-center font-bold text-xl">Regulamin</h1>
-                                        <p class="font-medium text-lg">Tworzenie kolorystycznych regulaminów.</p>
-                                      </div>
-                                      <div class="py-5 px-5 max-sm:px-3 flex justify-start items-start flex-wrap gap-5">
-                                        <a href="" class="bg-blue-500 rounded-xl text-white hover:bg-transparent delay-150 transition-all px-3 py-3 font-bold text-lg">Obczaj więcej!</a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="py-20">
-                                    <div class="rounded-xl bg-slate-300 shadow-xl border-2 border-blue-500 hover:border-4 hover:border-blue-500 hover:shadow-2xl transition-all delay-150">
-                                      <img src="soon.png" class="rounded-t-xl max-w-lg max-sm:max-w-sm">
-                                      <div class="py-10">
-                                        <h1 class="text-center font-bold text-xl">Soon</h1>
-                                        <p class="font-medium text-lg">Soon</p>
-                                      </div>
-                                      <div class="py-5 px-5 max-sm:px-3 flex justify-start items-start flex-wrap gap-5">
-                                        <a href="" class="bg-blue-500 rounded-xl text-white hover:bg-transparent delay-150 transition-all px-3 py-3 font-bold text-lg">Obczaj więcej!</a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
     </main>
     <script>
@@ -452,6 +731,236 @@ function toggleSVGs() {
     currentSVG = 1;
   }
 }  
+</script>
+<Script>
+  const galleryImages = document.querySelectorAll('.gallery img');
+  const fullscreenContainer = document.querySelector('.fullscreen-container');
+  const fullscreenImage = document.querySelector('.fullscreen-image');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  let currentSlide = 0;
+
+  galleryImages.forEach((img, index) => {
+      img.addEventListener('click', function() {
+          const imageUrl = this.src;
+          fullscreenImage.src = imageUrl;
+          fullscreenContainer.style.display = 'flex';
+          document.body.style.overflow = 'hidden'; // Wyłącza przewijanie strony w tle
+          currentSlide = index;
+      });
+  });
+
+  fullscreenImage.addEventListener('click', function(event) {
+      event.stopPropagation(); // Zapobiega zamykaniu fullscreen po kliknięciu na obrazek
+      changeSlide(1); // Przewiń do następnego obrazu po kliknięciu na obrazek w trybie pełnoekranowym
+  });
+
+  function closeFullscreen() {
+    fullscreenContainer.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Przywraca przewijanie strony
+}
+
+  function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) {
+          currentSlide = galleryImages.length - 1;
+      } else if (currentSlide >= galleryImages.length) {
+          currentSlide = 0;
+      }
+      fullscreenImage.src = galleryImages[currentSlide].src;
+  }
+
+  // Zapobieganie propagacji zdarzenia po kliknięciu na przyciskach prev i next
+  prevButton.addEventListener('click', function(event) {
+      event.stopPropagation();
+  });
+
+  nextButton.addEventListener('click', function(event) {
+      event.stopPropagation();
+  });
+
+</Script>
+<script>
+   const galleryImages2 = document.querySelectorAll('.gallery2 img');
+  const fullscreenContainer2 = document.querySelector('.fullscreen-container2');
+  const fullscreenImage2 = document.querySelector('.fullscreen-image2');
+  let currentSlide2 = 0;
+
+  galleryImages2.forEach((img, index) => {
+      img.addEventListener('click', function() {
+          const imageUrl = this.src;
+          fullscreenImage2.src = imageUrl;
+          fullscreenContainer2.style.display = 'flex';
+          document.body.style.overflow = 'hidden'; // Wyłącza przewijanie strony w tle
+          currentSlide2 = index;
+      });
+  });
+
+  fullscreenImage2.addEventListener('click', function(event) {
+      event.stopPropagation(); // Zapobiega zamykaniu fullscreen po kliknięciu na obrazek
+      changeSlide2(1, event); // Przewiń do następnego obrazu po kliknięciu na obrazek w trybie pełnoekranowym
+  });
+
+  function closeFull() {
+    fullscreenContainer2.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Przywraca przewijanie strony
+}
+
+
+  function changeSlide2(direction, event) {
+      currentSlide2 += direction;
+      if (currentSlide2 < 0) {
+          currentSlide2 = galleryImages2.length - 1;
+      } else if (currentSlide2 >= galleryImages2.length) {
+          currentSlide2 = 0;
+      }
+      fullscreenImage2.src = galleryImages2[currentSlide2].src;
+      event.stopPropagation(); // Zapobiega zamykaniu fullscreen po kliknięciu na przycisk przewijania
+  }
+</script>
+<script>
+function displayInfo(message) {
+    var infoDiv = document.getElementById('info');
+    infoDiv.textContent = message;
+
+    // Po 5 sekundach usuń informację i pokaż zawartość strony
+    setTimeout(function() {
+        infoDiv.textContent = '';
+        infoDiv.style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+        document.body.style.overflow = 'auto'; // Przywrócenie przewijania strony
+    }, 5000);
+}
+displayInfo('Strona w trakcie budowy!!!');
+</script>
+<script>
+  const element = document.querySelector('.boxik');
+const element2 = document.querySelector('.boxik2');
+const element3 = document.querySelector('.boxik3');
+const element4 = document.querySelector('.boxik4');
+const element5 = document.querySelector('.boxik5');
+const element6 = document.querySelector('.boxik6');
+const element7 = document.querySelector('.boxik7');
+const element8 = document.querySelector('.boxik8');
+const element9 = document.querySelector('.boxik9');
+
+// Define the options for the Intersection Observer
+const options2 = {
+  root: null,
+  rootMargin: '100px',
+  threshold: 0.9
+};
+
+// Create a new Intersection Observer
+const observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element.classList.add('show');
+    }
+/*     else {
+      element.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer2 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element2.classList.add('show');
+    }
+/*     else {
+      element2.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer3 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element3.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer4 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element4.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer5 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element5.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer6 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element6.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer7 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element7.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer8 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element8.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer9 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element9.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+// Start observing the element
+observer.observe(element);
+observer2.observe(element2);
+observer3.observe(element3);
+observer4.observe(element4);
+observer5.observe(element5);
+observer6.observe(element6);
+observer7.observe(element7);
+observer8.observe(element8);
+observer9.observe(element9);
 </script>
 </body>
 </html>
